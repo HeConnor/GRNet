@@ -37,7 +37,7 @@ def inference_net(cfg):
         grnet = torch.nn.DataParallel(grnet).cuda()
 
     # Load the pretrained model from a checkpoint
-    logging.info('Recovering from %s ...' % (cfg.CONST.WEIGHTS))
+    logging.info('Recovering from %s ...' % cfg.CONST.WEIGHTS)
     checkpoint = torch.load(cfg.CONST.WEIGHTS)
     grnet.load_state_dict(checkpoint['grnet'])
 

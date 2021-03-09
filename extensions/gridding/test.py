@@ -38,7 +38,8 @@ class GriddingTestCase(unittest.TestCase):
     def test_gridding_function_32pts(self):
         x = torch.rand(1, 32, 3)
         x.requires_grad = True
-        self.assertTrue(gradcheck(GriddingFunction.apply, [x.double().cuda()]))
+        # self.assertTrue(gradcheck(GriddingFunction.apply, [32, x.double().cuda()]))
+        self.assertTrue(gradcheck(GriddingFunction.apply, [32, x.float().cuda()]))
 
 
 if __name__ == '__main__':

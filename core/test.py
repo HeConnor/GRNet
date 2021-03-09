@@ -40,7 +40,7 @@ def test_net(cfg, epoch_idx=-1, test_data_loader=None, test_writer=None, grnet=N
         if torch.cuda.is_available():
             grnet = torch.nn.DataParallel(grnet).cuda()
 
-        logging.info('Recovering from %s ...' % (cfg.CONST.WEIGHTS))
+        logging.info('Recovering from %s ...' % cfg.CONST.WEIGHTS)
         checkpoint = torch.load(cfg.CONST.WEIGHTS)
         grnet.load_state_dict(checkpoint['grnet'])
 

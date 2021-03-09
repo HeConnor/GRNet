@@ -86,7 +86,7 @@ def train_net(cfg):
     init_epoch = 0
     best_metrics = None
     if 'WEIGHTS' in cfg.CONST:
-        logging.info('Recovering from %s ...' % (cfg.CONST.WEIGHTS))
+        logging.info('Recovering from %s ...' % cfg.CONST.WEIGHTS)
         checkpoint = torch.load(cfg.CONST.WEIGHTS)
         best_metrics = Metrics(cfg.TEST.METRIC_NAME, checkpoint['best_metrics'])
         grnet.load_state_dict(checkpoint['grnet'])

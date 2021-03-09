@@ -26,23 +26,26 @@ __C.DATASETS.SHAPENET.PARTIAL_POINTS_PATH        = '/home/SENSETIME/xiehaozhe/Da
 __C.DATASETS.SHAPENET.COMPLETE_POINTS_PATH       = '/home/SENSETIME/xiehaozhe/Datasets/ShapeNet/ShapeNetCompletion/%s/complete/%s/%s.pcd'
 __C.DATASETS.KITTI                               = edict()
 __C.DATASETS.KITTI.CATEGORY_FILE_PATH            = './datasets/KITTI.json'
-__C.DATASETS.KITTI.PARTIAL_POINTS_PATH           = '/home/SENSETIME/xiehaozhe/Datasets/KITTI/cars/%s.pcd'
-__C.DATASETS.KITTI.BOUNDING_BOX_FILE_PATH        = '/home/SENSETIME/xiehaozhe/Datasets/KITTI/bboxes/%s.txt'
-
+# __C.DATASETS.KITTI.PARTIAL_POINTS_PATH           = '/home/SENSETIME/xiehaozhe/Datasets/KITTI/cars/%s.pcd'
+# __C.DATASETS.KITTI.BOUNDING_BOX_FILE_PATH        = '/home/SENSETIME/xiehaozhe/Datasets/KITTI/bboxes/%s.txt'
+__C.DATASETS.KITTI.PARTIAL_POINTS_PATH           = './datasets/kitti/cars/%s.pcd'
+__C.DATASETS.KITTI.BOUNDING_BOX_FILE_PATH        = './datasets/kitti/bboxes/%s.txt'
 #
 # Dataset
 #
 __C.DATASET                                      = edict()
 # Dataset Options: Completion3D, ShapeNet, ShapeNetCars, KITTI
 __C.DATASET.TRAIN_DATASET                        = 'ShapeNet'
-__C.DATASET.TEST_DATASET                         = 'ShapeNet'
+# __C.DATASET.TEST_DATASET                         = 'ShapeNet'
+__C.DATASET.TEST_DATASET                         = 'KITTI'
 
 #
 # Constants
 #
 __C.CONST                                        = edict()
 __C.CONST.DEVICE                                 = '0'
-__C.CONST.NUM_WORKERS                            = 8
+# __C.CONST.NUM_WORKERS                            = 8
+__C.CONST.NUM_WORKERS                            = 1
 __C.CONST.N_INPUT_POINTS                         = 2048
 
 #

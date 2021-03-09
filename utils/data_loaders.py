@@ -16,7 +16,7 @@ import utils.data_transforms
 from enum import Enum, unique
 from tqdm import tqdm
 
-from utils.io import IO
+from utils.io_utils import IO
 
 
 @unique

@@ -15,12 +15,14 @@ from tensorpack import dataflow
 
 
 def main():
-    if not len(sys.argv) == 3:
-        print('Usage: python lmdb_serializer.py lmdb_file_path output_folder')
-        sys.exit(1)
-
-    lmdb_file_path = sys.argv[1]
-    output_base_folder = sys.argv[2]
+    # if not len(sys.argv) == 3:
+    #     print('Usage: python lmdb_serializer.py lmdb_file_path output_folder')
+    #     sys.exit(1)
+    #
+    # lmdb_file_path = sys.argv[1]
+    # output_base_folder = sys.argv[2]
+    lmdb_file_path = '/home/admin717/test_hsj/GRNet/datasets/valid.lmdb'
+    output_base_folder = '/home/admin717/test_hsj/GRNet/datasets/shapenet'
 
     df = dataflow.LMDBSerializer.load(lmdb_file_path, shuffle=False)
     df.reset_state()
